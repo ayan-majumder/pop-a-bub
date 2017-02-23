@@ -18,7 +18,7 @@ var Game_Over = {
     },
 
     startGame: function () {
-
+        count=0;
         // Change the state to the actual game.
         this.state.start('Game');
 	

@@ -8,7 +8,8 @@ var count=0;
 var Game = {
 
     preload : function() {
-    	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
+    	game.load.image('background','back_' + game.rnd.integerInRange(1,3)+'.jpg');
+    //	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
     	game.load.image('pbub', 'speech-balloon-white-p-icon.png');
     	game.load.image('abub','speech-balloon-green-a-icon.png');
     	game.load.image('bbub','speech-balloon-orange-b-icon.png');
@@ -30,7 +31,7 @@ var Game = {
     function updateCounter()
     {
         total++;
-        if(total==11)
+        if(total==3)
         {
             
            // game_music.stop();
