@@ -8,21 +8,19 @@ var count=0;
 var Game = {
 
     preload : function() {
-<<<<<<< HEAD
-    	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
+    //	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
     	game.load.image('pbub','c1.png');
     	game.load.image('abub','cd1.png');
     	game.load.image('bbub','p4.png');
         game.load.image('cbub','r2.png');
         game.load.image('dbub','pi2.png');
         game.load.image('ebub','w1.png');
-=======
     	game.load.image('background','back_' + game.rnd.integerInRange(1,3)+'.jpg');
     //	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
     	game.load.image('pbub', 'speech-balloon-white-p-icon.png');
     	game.load.image('abub','speech-balloon-green-a-icon.png');
     	game.load.image('bbub','speech-balloon-orange-b-icon.png');
->>>>>>> 0819be371d2daa1a3f525c0fded7f3e59934d2c2
+
         // Here we load all the needed resources for the level.
         // In our case, that's just two squares - one for the snake body and one for the apple.
         // game.load.image('snake', 'snake.png');
@@ -43,7 +41,7 @@ var Game = {
     function updateCounter()
     {
         total++;
-        if(total==3)
+        if(total==11)
         {
             
            // game_music.stop();
