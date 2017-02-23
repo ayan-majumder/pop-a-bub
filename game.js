@@ -9,9 +9,12 @@ var Game = {
 
     preload : function() {
     	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
-    	game.load.image('pbub', 'speech-balloon-white-p-icon.png');
-    	game.load.image('abub','speech-balloon-green-a-icon.png');
-    	game.load.image('bbub','speech-balloon-orange-b-icon.png');
+    	game.load.image('pbub','c1.png');
+    	game.load.image('abub','cd1.png');
+    	game.load.image('bbub','p4.png');
+        game.load.image('cbub','r2.png');
+        game.load.image('dbub','pi2.png');
+        game.load.image('ebub','w1.png');
         // Here we load all the needed resources for the level.
         // In our case, that's just two squares - one for the snake body and one for the apple.
         // game.load.image('snake', 'snake.png');
@@ -34,7 +37,7 @@ var Game = {
         {
             
            // game_music.stop();
-            alert("SORRY!! TIME UP :(");
+        
     game.state.start('Game_Over');
     total = 1;
     }
@@ -45,19 +48,32 @@ var Game = {
 
 // for random p and a bubbles
 
-        for(var j=0; j< 10; j++)
+        for(var j=0; j< 3; j++)
         {
         	var pbubble = game.add.sprite(-100 + (game.world.randomX), 600, 'pbub');
 
-        pbubble.scale.set(game.rnd.realInRange(0.1, 0.5));
+       pbubble.scale.set(game.rnd.realInRange(0.5, 1));
 
         var abubble = game.add.sprite(-100 + (game.world.randomX), 600, 'abub');
 
-        abubble.scale.set(game.rnd.realInRange(0.1, 0.3));
+        abubble.scale.set(game.rnd.realInRange(0.5, 1));
 
         var bbubble = game.add.sprite(-100 + (game.world.randomX), 600, 'bbub');
 
-        bbubble.scale.set(game.rnd.realInRange(0.1, 0.4));
+        bbubble.scale.set(game.rnd.realInRange(0.5, 1));
+
+        var cbubble = game.add.sprite(-100 + (game.world.randomX), 600, 'cbub');
+
+       cbubble.scale.set(game.rnd.realInRange(0.5, 1));
+
+       var dbubble = game.add.sprite(-100 + (game.world.randomX), 600, 'dbub');
+
+        dbubble.scale.set(game.rnd.realInRange(0.5, 1));
+
+        var ebubble = game.add.sprite(-100 + (game.world.randomX), 600, 'ebub');
+
+        ebubble.scale.set(game.rnd.realInRange(0.5, 1));
+
 
         var speed = game.rnd.between(8000, 10000);
 
@@ -65,7 +81,16 @@ var Game = {
 
         game.add.tween(pbubble).to({ y: -120 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
 
-        game.add.tween(bbubble).to({ y: -90 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
+        game.add.tween(bbubble).to({ y: -70}, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
+
+        game.add.tween(cbubble).to({ y: -150 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
+
+        game.add.tween(dbubble).to({ y: -80 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
+
+        game.add.tween(ebubble).to({ y: -90 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
+
+
+
 
         delay += 150;
 
@@ -77,11 +102,11 @@ var Game = {
         }
 
 // for b bubbles only
-    	for (var i = 0; i < 10; i++)
+    	for (var i = 0; i < 5; i++)
     	{
         var bbubble = game.add.sprite(-100 + (game.world.randomX), 600, 'bbub');
 
-        bbubble.scale.set(game.rnd.realInRange(0.1, 0.4));
+        bbubble.scale.set(game.rnd.realInRange(0.5, 1));
 
         // var pbubble = game.add.sprite(-100 + (game.world.randomX), 600, 'pbub');
 
@@ -112,9 +137,9 @@ function destroySprite (bbubble) {
 
     bbubble.destroy();
        count++;
-       if(count==15)
+       if(count==6)
     {
-        alert("CONGRATS!! YOU WON :)");
+       // alert("CONGRATS!! YOU WON :)");
         game.state.start('Game_Over');
         total=1;
     }
@@ -124,7 +149,7 @@ function destroySprite (bbubble) {
 
     update: function() {
 
-    	 game.add.text(32, 32, "BURST 15 'B' BUBBLES IN 10 SECS", { font: "16px sans-serif", fill: "#FFFFFF"});
+     game.add.text(32, 32, "BURST 15 'B' BUBBLES IN 10 SECS", { font: "16px sans-serif", fill: "#FFFFFF"});
     game.debug.text('TIME IN SECONDS: ' + total,32,32);
     game.debug.text('BUBBLES BURST: ' +count,32,580);
     	//bg.tilePosition.y += -0.4;
