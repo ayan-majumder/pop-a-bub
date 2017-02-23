@@ -8,21 +8,21 @@ var count=0;
 var Game = {
 
     preload : function() {
-<<<<<<< HEAD
-    	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
+
+    	
     	game.load.image('pbub','c1.png');
     	game.load.image('abub','cd1.png');
     	game.load.image('bbub','p4.png');
         game.load.image('cbub','r2.png');
         game.load.image('dbub','pi2.png');
         game.load.image('ebub','w1.png');
-=======
+
     	game.load.image('background','back_' + game.rnd.integerInRange(1,3)+'.jpg');
     //	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
     	game.load.image('pbub', 'speech-balloon-white-p-icon.png');
     	game.load.image('abub','speech-balloon-green-a-icon.png');
     	game.load.image('bbub','speech-balloon-orange-b-icon.png');
->>>>>>> 0819be371d2daa1a3f525c0fded7f3e59934d2c2
+
         // Here we load all the needed resources for the level.
         // In our case, that's just two squares - one for the snake body and one for the apple.
         // game.load.image('snake', 'snake.png');
@@ -41,7 +41,7 @@ var Game = {
     function updateCounter()
     {
         total++;
-        if(total==3)
+        if(total==11)
         {
             
            // game_music.stop();
@@ -96,9 +96,6 @@ var Game = {
         game.add.tween(dbubble).to({ y: -80 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
 
         game.add.tween(ebubble).to({ y: -90 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
-
-
-
 
         delay += 150;
 
@@ -157,9 +154,9 @@ function destroySprite (bbubble) {
 
     update: function() {
 
-     game.add.text(32, 32, "BURST 15 'B' BUBBLES IN 10 SECS", { font: "16px sans-serif", fill: "#FFFFFF"});
+     game.add.text(32, 32, "CLICK 6 POS MACHINES IN 10 SECS", { font: "16px sans-serif", fill: "#FFFFFF"});
     game.debug.text('TIME IN SECONDS: ' + total,32,32);
-    game.debug.text('BUBBLES BURST: ' +count,32,580);
+    game.debug.text('POS BURST: ' +count,32,580);
     	//bg.tilePosition.y += -0.4;
     },
 
