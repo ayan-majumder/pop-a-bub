@@ -17,7 +17,7 @@ var Game = {
         game.load.image('dbub','pi2.png');
         game.load.image('ebub','w1.png');
 
-    	game.load.image('background','back_' + game.rnd.integerInRange(1,3)+'.jpg');
+    	game.load.image('background','back_' + game.rnd.integerInRange(1,6)+'.jpg');
     //	game.load.image('background','very-cool-blue-sky-800x600-wallpaper.jpg');
     	game.load.image('pbub', 'speech-balloon-white-p-icon.png');
     	game.load.image('abub','speech-balloon-green-a-icon.png');

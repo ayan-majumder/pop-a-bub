@@ -18,11 +18,6 @@ var Game_Over = {
     },
 
     startGame: function () {
-
-
-        count=0;
-
-
         count=0;
 
         // Change the state to the actual game.
