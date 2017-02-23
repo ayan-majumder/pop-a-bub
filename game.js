@@ -33,6 +33,8 @@ var Game = {
 
     create : function() {
 
+         
+
     	timer=game.time.create(false);
     timer.loop(1000,updateCounter,this);
         timer.start();
@@ -130,6 +132,7 @@ var Game = {
 
         // game.add.tween(pbubble).to({ y: -120 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
 
+        
         game.add.tween(bbubble).to({ y: -90 }, speed, Phaser.Easing.Sinusoidal.InOut, true, delay, 1000, false);
 
         delay += 150;
