@@ -18,9 +18,13 @@ var Game_Over = {
     },
 
     startGame: function () {
+<<<<<<< HEAD
 
         count=0;
 
+=======
+        count=0;
+>>>>>>> 0819be371d2daa1a3f525c0fded7f3e59934d2c2
         // Change the state to the actual game.
         this.state.start('Game');
 	
